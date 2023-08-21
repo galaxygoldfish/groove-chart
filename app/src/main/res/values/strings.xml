@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">GrooveChart</string>
+
+    <string name="onboarding_log_in_button">Log in with Spotify</string>
+
+    <string name="home_title_top_tracks">Top tracks</string>
+    <string name="home_title_top_artists">Top artists</string>
+    <string name="home_title_top_genres">Your favorite genres</string>
+
+    <string name="home_header_friends">Friend activity</string>
+    <string name="home_header_music">Recommendations</string>
+
+    <string-array name="home_nav_labels">
+        <item>HOME</item>
+        <item>FRIENDS</item>
+        <item>MUSIC</item>
+    </string-array>
+
+    <string name="top_track_header">Top tracks</string>
+    <string name="top_artist_header">Top artists</string>
+
+    <string-array name="top_item_time_choices">
+        <item>MONTH</item>
+        <item>6 MONTHS</item>
+        <item>ALL TIME</item>
+    </string-array>
+    
+    <string name="recommendation_monthly_title">Monthly discovery</string>
+    <string name="recommendation_monthly_subtitle">Get a playlist with songs we think you’ll like based on your favorites from the last month</string>
+    <string name="recommendation_year_title">Year in review</string>
+    <string name="recommendation_year_subtitle">Get a mixtape of your top songs of the past year mixed in with some new ones to define the next year</string>
+    <string name="recommendation_genre_title">Genre revolution</string>
+    <string name="recommendation_genre_subtitle">Pick a genre, and we’ll help you explore it further with new songs that you might like </string>
+    <string name="recommendation_custom_title">Completely custom</string>
+    <string name="recommendation_custom_subtitle">Pick any genre and customize the mood, and we’ll find the perfect songs for your next mix</string>
+
+    <string name="playlist_creator_finalize_title">Finalize details</string>
+    <string name="playlist_creator_name_hint">Enter a catchy playlist name</string>
+    <string name="playlist_creator_length_title">Playlist length</string>
+    <string name="playlist_creator_public_title">Make playlist public</string>
+    <string name="playlist_creator_loading_label">Hold on while we fetch your recommendations…</string>
+    <string name="playlist_creator_pick_genre_title">Pick a genre</string>
+    <string name="playlist_creator_pick_multiple_genres_title">Pick 1-5 genres</string>
+    <string name="playlist_creator_pick_genre_search_hint">Search</string>
+    <string name="playlist_creator_selected_genres_title">Selected genres:</string>
+    <string name="playlist_creator_customize_sound_title">Adjust the mood</string>
+    
+    <string name="customize_sound_danceability">Danceability</string>
+    <string name="customize_sound_energy">Energy</string>
+    <string name="customize_sound_instrumentalness">Instrumentalness</string>
+    <string name="customize_sound_liveness">Liveness</string>
+    <string name="customize_sound_popularity">Popularity</string>
+    <string name="customize_sound_speechiness">Speechiness</string>
+
+</resources>
