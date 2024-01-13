@@ -79,7 +79,7 @@ fun HomeView(navController: NavController, authCode: String? = null) {
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .background(MaterialTheme.colorScheme.background)
-                                    .background(MaterialTheme.colorScheme.onBackground.copy(0.05F))
+                                    .background(MaterialTheme.colorScheme.onBackground.copy(0.1F))
                                     .navigationBarsPadding(),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {

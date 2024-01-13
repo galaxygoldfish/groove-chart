@@ -27,7 +27,7 @@ fun calculateTimeDifference(unixTimestamp: Long): String {
 }
 
 
-// thank you chat gpt for the search code
+
 fun getSimilarStrings(query: String, stringList: List<String>): List<String> {
     return stringList.filter { isSimilar(query, it, 2) }
 }

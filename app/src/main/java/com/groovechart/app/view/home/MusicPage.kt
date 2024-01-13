@@ -1,5 +1,7 @@
 package com.groovechart.app.view.home
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -16,9 +18,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.paint
+import androidx.compose.ui.graphics.painter.BrushPainter
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -43,33 +47,25 @@ fun MusicPage(
             .verticalScroll(rememberScrollState())
     ) {
         RecommendationCard(
-            background = painterResource(id = R.drawable.monthly_discovery_bg_light),
-            title = stringResource(id = R.string.recommendation_monthly_title),
-            subtitle = stringResource(id = R.string.recommendation_monthly_subtitle),
+            background = painterResource(id = R.drawable.montlhy_discovery),
             onClick = {
                 navController.navigate("${NavDestination.FinalizeDetailView}/month")
             }
         )
         RecommendationCard(
-            background = painterResource(id = R.drawable.year_in_review_bg_light),
-            title = stringResource(id = R.string.recommendation_year_title),
-            subtitle = stringResource(id = R.string.recommendation_year_subtitle),
+            background = painterResource(id = R.drawable.year_in_review),
             onClick = {
                 navController.navigate("${NavDestination.FinalizeDetailView}/year")
             }
         )
         RecommendationCard(
-            background = painterResource(id = R.drawable.genre_revolution_bg_light),
-            title = stringResource(id = R.string.recommendation_genre_title),
-            subtitle = stringResource(id = R.string.recommendation_genre_subtitle),
+            background = painterResource(id = R.drawable.genre_revolution),
             onClick = {
                 navController.navigate("${NavDestination.GenreSearch}/false")
             }
         )
-        RecommendationCard(
-            background = painterResource(id = R.drawable.custom_bg_light),
-            title = stringResource(id = R.string.recommendation_custom_title),
-            subtitle = stringResource(id = R.string.recommendation_custom_subtitle),
+        RecommendationCard(  
+            background = painterResource(id = R.drawable.completely_custom),
             onClick = {
                 navController.navigate("${NavDestination.GenreSearch}/" + true)
             }
@@ -80,8 +76,6 @@ fun MusicPage(
 @Composable
 fun RecommendationCard(
     background: Painter,
-    title: String,
-    subtitle: String,
     onClick: () -> Unit
 ) {
     Box(
@@ -98,36 +92,10 @@ fun RecommendationCard(
                 onClick.invoke()
             }
     ) {
-        Column(
-            Modifier
-                .fillMaxWidth()
-                .paint(background, contentScale = ContentScale.Crop)
-                .padding(top = 15.dp, start = 17.dp, end = 17.dp),
-            verticalArrangement = Arrangement.SpaceBetween
-        ) {
-            Column {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.labelLarge
-                )
-                Text(
-                    text = subtitle,
-                    modifier = Modifier.padding(top = 3.dp),
-                    style = MaterialTheme.typography.bodyMedium
-                            + TextStyle(fontSize = 18.sp, letterSpacing = -(0.3).sp)
-                )
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 15.dp),
-                horizontalArrangement = Arrangement.End
-            ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.ic_arrow_down_end),
-                    contentDescription = null
-                )
-            }
-        }
+        Image(
+            painter = background,
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
     }
 }

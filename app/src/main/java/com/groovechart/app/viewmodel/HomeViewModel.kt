@@ -50,7 +50,7 @@ class HomeViewModel : ViewModel() {
             addAll(
                 networkProvider.getTopTracks(
                     context,
-                    timeRange = "medium_term",
+                    timeRange = "short_term",
                     limit = 3,
                     offset = 0
                 ).items

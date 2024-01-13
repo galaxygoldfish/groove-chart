@@ -115,7 +115,8 @@ fun ContentListItem(
 @Composable
 fun LoadingView(message: String? = null) {
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize()
+            .background(MaterialTheme.colorScheme.background),
         contentAlignment = Alignment.Center
     ) {
         Column(
